@@ -5,6 +5,8 @@
         <title>TiketWar</title>
     </head>
     <body>
-        
+        <?php
+        echo "Selamat datang di ByteWar - war tiket konser paling gercep";
+        ?>
     </body>
 </html>
