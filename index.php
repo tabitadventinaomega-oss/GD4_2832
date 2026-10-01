@@ -31,6 +31,15 @@
         <p>Konser terdekat: <?php echo $daftarKonser[0]["nama"]; ?></p>
         <p>Tanggal: <?php echo $daftarKonser[0]["tanggal"]; ?></p>
 
+        <?php
+        $hargaAsli = $daftarKonser[0]["harga"];
+        $persenDiskon = 20;
+        $hargaSetelahDiskon = $hargaAsli - ($hargaAsli * $persenDiskon / 100);
+        $tiketMasihAda = $daftarKonser[0]["harga"]>0;
+        ?>
+
+        <p>Harga asli: Rp<?php echo $hargaAsli; ?></p>
+        <p>Setelah diskon <?php echo $persenDiskon; ?>%: Rp<?php echo $hargaSetelahDiskon; ?></p>
 
         <?php
         echo "Selamat datang di ByteWar - war tiket konser paling gercep";
