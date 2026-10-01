@@ -10,17 +10,15 @@
         $hargaTiket = 1500000;
         $sisaTiket = 25;
         $sudahSoldOut= false;
+        $kategoriTiket = "Festival";
         ?>
         <p>Konser: <?php echo $namaKonser; ?></p>
         <p>Harga: Rp<?php echo $hargaTiket; ?></p>
         <p>Sisa Tiket: <?php echo $sisaTiket; ?></p>
-        
-        <?php
-        echo "Selamat datang di ByteWar - war tiket konser paling gercep";
-        ?>
+        <p>Kategori Tiket: <?php echo $kategoriTiket; ?></p>
 
         <?php
-        echo "Tiket akan segera dibuka";
+        echo "Selamat datang di ByteWar - war tiket konser paling gercep";
         ?>
     </body>
 </html>
