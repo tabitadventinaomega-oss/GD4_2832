@@ -42,6 +42,41 @@
         <p>Setelah diskon <?php echo $persenDiskon; ?>%: Rp<?php echo $hargaSetelahDiskon; ?></p>
 
         <?php
+        $sisaTiket = $daftarKonser[0]["harga"] > 0 ? 15 : 0;
+        if ($sisaTiket > 10) {
+            $statusTiket = "Masih Banyak";
+        } elseif ($sisaTiket > 0) {
+            $statusTiket = "Sisa Dikit, Buruan!";
+        } else {
+            $statusTiket = "Sold  Out";
+        }
+
+        $kategori = $daftarKonser[0]["kategori"];
+        switch ($kategori) {
+            case "Festival": $badge = "Festival Pass"; break;
+            case "VIP": $badge = "VIP Access"; break;
+            case "Reguler": $badge = "Reguler"; break;
+            default: $badge = "Kategori tidak dikenal";
+        }
+        ?>
+        <p>Status: <?php echo $statusTiket; ?></p>
+        <p>Kategori: <?php echo $badge; ?></p>
+
+        <?php
+        $namaKonser = "Coldplay - Music of the Spheres";
+        $hargaTiket = 1500000;
+        $sisaTiket = 25;
+        $sudahSoldOut= false;
+        $kategoriTiket = "Festival";
+        ?>
+
+
+        <p>Konser: <?php echo $namaKonser; ?></p>
+        <p>Harga: Rp<?php echo $hargaTiket; ?></p>
+        <p>Sisa Tiket: <?php echo $sisaTiket; ?></p>
+        <p>Kategori Tiket: <?php echo $kategoriTiket; ?></p>
+
+        <?php
         echo "Selamat datang di ByteWar - war tiket konser paling gercep";
         ?>
     </body>
