@@ -8,5 +8,9 @@
         <?php
         echo "Selamat datang di ByteWar - war tiket konser paling gercep";
         ?>
+        
+        <?php
+        echo "Tiket akan segera dibuka";
+        ?>
     </body>
 </html>
