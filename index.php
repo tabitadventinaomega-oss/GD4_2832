@@ -6,6 +6,10 @@
     </head>
     <body>
         <?php
+        echo "Selamat datang di ByteWar - war tiket konser paling gercep";
+        ?>
+
+        <?php
         $daftarKonser = [
             [
             "nama" => "Coldplay - Music of the Spheres",
@@ -62,22 +66,15 @@
         <p>Status: <?php echo $statusTiket; ?></p>
         <p>Kategori: <?php echo $badge; ?></p>
 
-        <?php
-        $namaKonser = "Coldplay - Music of the Spheres";
-        $hargaTiket = 1500000;
-        $sisaTiket = 25;
-        $sudahSoldOut= false;
-        $kategoriTiket = "Festival";
-        ?>
+        <h2>Daftar Konser War Tiket Minggu Ini</h2>
 
-
-        <p>Konser: <?php echo $namaKonser; ?></p>
-        <p>Harga: Rp<?php echo $hargaTiket; ?></p>
-        <p>Sisa Tiket: <?php echo $sisaTiket; ?></p>
-        <p>Kategori Tiket: <?php echo $kategoriTiket; ?></p>
-
-        <?php
-        echo "Selamat datang di ByteWar - war tiket konser paling gercep";
-        ?>
+        <?php foreach ($daftarKonser as $konser) { ?>
+        <div style="border: 1px solid #ccc; padding: 12 px; margin-bottom: 8px;">
+            <h3><?php echo $konser["nama"]; ?></h3>
+            <p>Tanggal: <?php echo $konser["tanggal"]; ?></p>
+            <p>Kategori: <?php echo $konser["kategori"]; ?></p>
+            <p>Harga: Rp<?php echo number_format($konser["harga"], 0, ", ", "."); ?></p>
+        </div>
+        <?php } ?>
     </body>
 </html>
