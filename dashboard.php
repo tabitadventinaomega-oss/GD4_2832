@@ -20,7 +20,7 @@ if (!isset($_SESSION["daftarWar"])){
                 <p><?php echo $tiket["kategori"]; ?> - Rp<?php echo number_format($tiket["harga"], 0, ",", "."); ?></p>
                 <img src="<?php echo $tiket["bukti"]; ?>" width="100">
                 <form action="prosesHapus.php" method="post">
-                <input type="hidden" name="hapus" value="<? echo $i; ?>
+                <input type="hidden" name="hapus" value="<?php echo $i; ?>">
                 <button type="submit">Hapus</button>
                 </form>
             </div>
